@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CalorieView: View {
+    // Declare your variable here
     
     var body: some View {
         VStack (spacing: 16) {
@@ -16,6 +17,7 @@ struct CalorieView: View {
                 .font(.largeTitle)
                 .foregroundStyle(Color("ShadedBlue"))
             
+            // #1 Put variable here...change "0" with variable
             Text("0").font(.system(size: 64, weight: .bold))
                 .foregroundStyle(Color("AppBlue"))
             
@@ -29,6 +31,7 @@ struct CalorieView: View {
                     Image(systemName: "figure.stand.dress.line.vertical.figure")
                 }
                 
+                // #2 Put variable here...change the .constant()
                 Picker("Select Gender", selection: .constant("Male")) {
                     Text("Male").tag("Male")
                     Text("Female").tag("Female")
@@ -43,6 +46,7 @@ struct CalorieView: View {
                     Image(systemName: "scalemass")
                 }.font(.title2)
                 
+                // #3 Put variable here...change the .constant()
                 TextField("Enter weight in kg", text: .constant("50.4"))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.decimalPad)
@@ -58,7 +62,7 @@ struct CalorieView: View {
                 .font(.title2)
                 .padding(.top)
                 
-                
+                // #4 Put variable here...change the .constant()
                 TextField("Enter height in cm", text: .constant("170"))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .font(.title2)
@@ -73,6 +77,7 @@ struct CalorieView: View {
                 .font(.title2)
                 .padding(.top)
                 
+                // #5 Put variable here...change the .constant()
                 TextField("Enter your age", text: .constant("25"))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .font(.body)
@@ -94,6 +99,7 @@ struct CalorieView: View {
                 }
                 .padding(.top)
                 
+                // #6 Put variable here...change the .constant()
                 Picker("Select Activity Level", selection: .constant("Sedentary")) {
                     Text("Sedentary").tag("Sedentary")
                     Text("Lightly Active").tag("Lightly Active")
@@ -117,7 +123,7 @@ struct CalorieView: View {
                  
             } label: {
                 Text("Calculate")
-                    .foregroundStyle(Color("White"))
+                    .foregroundStyle(Color("AppWhite"))
                     .padding(.vertical, 20)
                     .frame(maxWidth: .infinity)
                     .background(Color("AppBlue"))
